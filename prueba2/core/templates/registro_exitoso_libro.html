@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Registro Exitoso{% endblock %}
+
+{% block content %}
+    <h1>¡Libro registrado exitosamente!</h1>
+    <p>El libro ha sido registrado correctamente.</p>
+    <a href="{% url 'registro_libro' %}" class="btn">Registrar otro libro</a>
+{% endblock %}

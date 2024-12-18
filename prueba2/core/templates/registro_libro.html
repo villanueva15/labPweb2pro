@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Registro de Libro{% endblock %}
+
+{% block content %}
+    <h1>Registro de Libro</h1>
+    <p>Por favor, ingrese los detalles del libro.</p>
+    <div class="messages">
+        {% for message in messages %}
+            <div class="{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_title">Título</label>
+            {{ form.title }}
+        </div>
+        <div class="form-group">
+            <label for="id_author">Autor</label>
+            {{ form.author }}
+        </div>
+        <div class="form-group">
+            <label for="id_genre">Género</label>
+            {{ form.genre }}
+        </div>
+        <div class="form-group">
+            <label for="id_published_date">Fecha de Publicación</label>
+            {{ form.published_date }}
+        </div>
+        <div class="form-group">
+            <label for="id_isbn">ISBN</label>
+            {{ form.isbn }}
+        </div>
+        <button type="submit" class="btn">Registrar</button>
+    </form>
+{% endblock %}

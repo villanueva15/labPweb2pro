@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Registro Exitoso{% endblock %}
+
+{% block content %}
+    <h1>¡Reseña registrada exitosamente!</h1>
+    <p>La reseña ha sido registrada correctamente.</p>
+    <a href="{% url 'registro_review' %}" class="btn">Registrar otra reseña</a>
+{% endblock %}
